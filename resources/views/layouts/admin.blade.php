@@ -38,29 +38,20 @@
 
     <div class="admin-wrapper">
 
-        {{-- =====================================
-         SIDEBAR
-    ====================================== --}}
+        {{-- SIDEBAR --}}
 
         <aside class="sidebar" id="sidebar">
 
             {{-- Logo --}}
             <div class="sidebar-header">
 
-                <div class="brand">
+                <a href="{{ route('admin.dashboard') }}" class="brand">
 
-                    <div class="brand-logo">
-                        <span class="material-symbols-rounded">
-                            sports
-                        </span>
+                    <div class="brand-logo-custom">
+                        <img src="{{ asset('images/Logo-Si-goray.png') }}" alt="Logo SI-GORAY">
                     </div>
 
-                    <div class="brand-text">
-                        <strong>SI-GORAY</strong>
-                        <span>Admin Panel</span>
-                    </div>
-
-                </div>
+                </a>
 
                 {{-- Mobile close --}}
                 <button class="sidebar-close" id="sidebarClose" type="button">
@@ -71,10 +62,7 @@
 
             </div>
 
-
-            {{-- =====================================
-             MENU
-        ====================================== --}}
+            {{-- MENU --}}
 
             <nav class="sidebar-menu">
 
@@ -86,13 +74,13 @@
                         dashboard
                     </span>
 
-                    {{-- Section --}}
-                    <div class="menu-section">
-                        UTAMA
-                    </div>
                     <span>Dashboard</span>
 
                 </a>
+                {{-- Section --}}
+                <div class="menu-section">
+                    UTAMA
+                </div>
 
 
 
@@ -230,10 +218,7 @@
 
             </nav>
 
-
-            {{-- =====================================
-             SIDEBAR FOOTER
-        ====================================== --}}
+            {{-- SIDEBAR FOOTER --}}
 
             <div class="sidebar-footer">
 
@@ -256,16 +241,10 @@
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 
-        {{-- =====================================
-         MAIN AREA
-    ====================================== --}}
-
+        {{-- MAIN AREA --}}
         <div class="main-wrapper">
 
-
-            {{-- =====================================
-             TOPBAR
-        ====================================== --}}
+            {{-- TOPBAR --}}
 
             <header class="topbar">
 
@@ -282,7 +261,6 @@
 
 
                     <div class="breadcrumb">
-
                         <span>
                             Admin
                         </span>
@@ -294,9 +272,7 @@
                         <strong>
                             @yield('page', 'Dashboard')
                         </strong>
-
                     </div>
-
                 </div>
 
 
@@ -366,7 +342,7 @@
 
 
             {{-- =====================================
-             CONTENT
+            CONTENT
         ====================================== --}}
 
             <main class="main-content">

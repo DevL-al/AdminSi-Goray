@@ -8,13 +8,12 @@ Route::get('/', function () {
 });
 
 
-// Route::prefix('admin')->name('admin.')->group(function () {
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])
+        ->name('dashboard');
 
-//     Route::get('/dashboard', [DashboardController::class, 'index'])
-//         ->name('dashboard');
+});
 
-// });
-
-Route::get('/admin/dashboard', function () {
-    return view('admin.dashboard');
-})->name('admin.dashboard');
+// Route::get('/admin/dashboard', function () {
+//     return view('admin.dashboard');
+// })->name('admin.dashboard');

@@ -19,6 +19,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    {{-- Favicon --}}
+    <link rel="icon" href="{{ asset('images/Logo-Si-goray.png') }}" type="image/png">
+
     {{-- Material Symbols --}}
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0">
@@ -50,7 +53,6 @@
                     <div class="brand-logo-custom">
                         <img src="{{ asset('images/Logo-Si-goray.png') }}" alt="Logo SI-GORAY">
                     </div>
-
                 </a>
 
                 {{-- Mobile close --}}
@@ -64,72 +66,58 @@
 
             {{-- MENU --}}
 
+            {{-- MENU --}}
             <nav class="sidebar-menu">
 
-                {{-- Dashboard --}}
-                <a href="{{ route('admin.dashboard') }}"
-                    class="menu-item {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
-
-                    <span class="material-symbols-rounded">
-                        dashboard
-                    </span>
-
-                    <span>Dashboard</span>
-
-                </a>
                 {{-- Section --}}
                 <div class="menu-section">
                     UTAMA
                 </div>
 
-
-
-
-                {{-- Kuota --}}
-                <a href="#" class="menu-item">
-
+                {{-- Dashboard --}}
+                <a href="{{ route('admin.dashboard') }}"
+                    class="menu-item {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
                     <span class="material-symbols-rounded">
-                        confirmation_number
+                        dashboard
                     </span>
-
-                    <span>Kelola Kuota Harian</span>
-
+                    <span>Dashboard</span>
                 </a>
 
+                {{-- Section --}}
+                <div class="menu-section">
+                    TIKET & PEMESANAN
+                </div>
 
-                {{-- Event --}}
+                {{-- Tiket Reguler --}}
                 <a href="#" class="menu-item">
-
                     <span class="material-symbols-rounded">
-                        event
+                        local_activity
                     </span>
-
-                    <span>Kelola Event</span>
-
+                    <span>Tiket Reguler</span>
                 </a>
 
-
-                {{-- Pemesanan --}}
+                {{-- Tiket Event --}}
                 <a href="#" class="menu-item">
-
                     <span class="material-symbols-rounded">
-                        shopping_cart
+                        storefront
                     </span>
-
-                    <span>Kelola Pemesanan</span>
-
+                    <span>Tiket Event</span>
                 </a>
 
-
-                {{-- Pembayaran --}}
+                {{-- Kelola Pesanan --}}
                 <a href="#" class="menu-item">
-
                     <span class="material-symbols-rounded">
-                        payments
+                        receipt_long
                     </span>
+                    <span>Kelola Pesanan</span>
+                </a>
 
+                {{-- Kelola Pembayaran --}}
+                <a href="#" class="menu-item">
+                    <span class="material-symbols-rounded">
+                        credit_card
+                    </span>
                     <span>Kelola Pembayaran</span>
-
                 </a>
 
 
@@ -138,100 +126,68 @@
                     PENGGUNA
                 </div>
 
-
-                {{-- User --}}
+                {{-- Kelola Notifikasi --}}
                 <a href="#" class="menu-item">
-
-                    <span class="material-symbols-rounded">
-                        group
-                    </span>
-
-                    <span>Kelola User</span>
-
-                </a>
-
-
-                {{-- Notifikasi --}}
-                <a href="#" class="menu-item">
-
                     <span class="material-symbols-rounded">
                         notifications
                     </span>
-
                     <span>Kelola Notifikasi</span>
+                </a>
 
+                {{-- Kelola User --}}
+                <a href="#" class="menu-item">
+                    <span class="material-symbols-rounded">
+                        account_circle
+                    </span>
+                    <span>Kelola User</span>
                 </a>
 
 
                 {{-- Section --}}
                 <div class="menu-section">
-                    GOR & LAPORAN
+                    FASILITAS
                 </div>
 
-
-                {{-- Reservasi --}}
+                {{-- Saran & Masukan --}}
                 <a href="#" class="menu-item">
-
                     <span class="material-symbols-rounded">
-                        stadium
+                        mail
                     </span>
-
-                    <span>Kelola Reservasi GOR</span>
-
+                    <span>Saran & Masukan</span>
                 </a>
-
 
                 {{-- Laporan --}}
                 <a href="#" class="menu-item">
-
                     <span class="material-symbols-rounded">
                         bar_chart
                     </span>
-
                     <span>Laporan</span>
-
                 </a>
 
 
-                {{-- Konten --}}
+                {{-- Section --}}
+                <div class="menu-section">
+                    PENGATURAN
+                </div>
+
+                {{-- Manajemen Admin --}}
                 <a href="#" class="menu-item">
-
                     <span class="material-symbols-rounded">
-                        web
+                        settings
                     </span>
-
-                    <span>Kelola Konten Website</span>
-
-                </a>
-
-
-                {{-- Admin --}}
-                <a href="#" class="menu-item">
-
-                    <span class="material-symbols-rounded">
-                        admin_panel_settings
-                    </span>
-
                     <span>Manajemen Admin</span>
-
                 </a>
 
             </nav>
 
             {{-- SIDEBAR FOOTER --}}
-
             <div class="sidebar-footer">
-
                 <a href="#" class="menu-item logout">
-
                     <span class="material-symbols-rounded">
                         logout
                     </span>
-
-                    <span>Logout</span>
-
+                    <span>KELUAR</span>
                 </a>
-
             </div>
 
         </aside>

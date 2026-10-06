@@ -98,7 +98,8 @@
 
 
                 {{-- Event --}}
-                <a href="#" class="menu-item">
+                <a href="{{ route('admin.events.index') }}"
+                    class="menu-item {{ request()->routeIs('admin.events.index') ? 'active' : '' }}">
 
                     <span class="material-symbols-rounded">
                         event

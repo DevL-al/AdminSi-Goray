@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\DashboardController;
 
 Route::get('/', function () {
@@ -14,6 +15,17 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 });
 
-// Route::get('/admin/dashboard', function () {
-//     return view('admin.dashboard');
-// })->name('admin.dashboard');
+Route::prefix('admin')
+    ->name('admin.')
+    ->group(function () {
+
+        Route::get('/events', [EventController::class, 'index'])
+            ->name('events.index');
+
+        Route::get('/events/create', [EventController::class, 'create'])
+            ->name('events.create');
+
+        Route::get('/events/{event}/edit', [EventController::class, 'edit'])
+            ->name('events.edit');
+
+    });

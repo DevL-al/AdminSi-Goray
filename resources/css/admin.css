@@ -151,9 +151,10 @@ a {
 }
 
 .brand-logo-custom {
-    width: 180px; /* Lebar disesuaikan agar pas di sidebar */
+    width: 150px; /* Lebar disesuaikan agar pas di sidebar */
     height: auto;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -926,4 +927,562 @@ body.dark .badge-warning {
     .charts-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* =========================================================
+   TICKET MANAGEMENT
+========================================================= */
+
+.ticket-management {
+    width: 100%;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ticket-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 10px;
+    margin-bottom: 8px;
+
+    border-top: 3px solid #ef233c;
+}
+
+.ticket-page-title h1 {
+    margin: 0;
+
+    color: #f5f7fa;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.ticket-page-title p {
+    margin: 3px 0 0;
+
+    color: #747d90;
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   BUTTON TAMBAH EVENT
+========================================================= */
+
+.btn-add-event {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    padding: 7px 10px;
+
+    border-radius: 6px;
+
+    background: #ef233c;
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: background 0.2s ease;
+}
+
+.btn-add-event:hover {
+    background: #d90429;
+}
+
+.btn-add-event .material-symbols-rounded {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   INFORMATION
+========================================================= */
+
+.ticket-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 5px 8px;
+    margin-bottom: 8px;
+
+    border: 1px solid #6b5510;
+    border-radius: 5px;
+
+    background: #261d1f;
+    color: #ffd60a;
+
+    font-size: 8px;
+}
+
+.ticket-info .material-symbols-rounded {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FILTER
+========================================================= */
+
+.ticket-filter {
+    display: flex;
+    align-items: center;
+
+    height: 30px;
+    padding: 0 6px;
+    margin-bottom: 9px;
+
+    border: 1px solid #3f4b61;
+    border-radius: 5px;
+
+    background: #101827;
+}
+
+.ticket-filter-item {
+    height: 100%;
+    padding: 0 12px;
+
+    border: none;
+    border-bottom: 2px solid transparent;
+
+    background: transparent;
+    color: #d4d8df;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.ticket-filter-item:hover {
+    color: #ffffff;
+}
+
+.ticket-filter-item.active {
+    border-bottom-color: #ef233c;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   EVENT CARD
+========================================================= */
+
+.ticket-event-card {
+    overflow: hidden;
+
+    border: 1px solid #465269;
+    border-radius: 8px;
+
+    background: #172033;
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.ticket-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 39px;
+    padding: 0 10px;
+
+    border-bottom: 1px solid #3e4a5f;
+}
+
+.ticket-month {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #f1f3f6;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.ticket-month .material-symbols-rounded {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   DATE NAVIGATION
+========================================================= */
+
+.ticket-date-navigation button {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    padding: 4px 7px;
+
+    border: 1px solid #4c5970;
+    border-radius: 5px;
+
+    background: #1b2639;
+    color: #e4e7ec;
+
+    font-size: 8px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.ticket-date-navigation button:hover {
+    border-color: #65728a;
+    background: #243149;
+}
+
+.ticket-date-navigation .material-symbols-rounded {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   TABLE CONTAINER
+========================================================= */
+
+.ticket-table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.ticket-management-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+}
+
+.ticket-management-table th {
+    padding: 8px 10px;
+
+    border-bottom: 1px solid #455066;
+
+    background: #151e30;
+    color: #f1f3f6;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    text-align: left;
+    white-space: nowrap;
+}
+
+.ticket-management-table td {
+    padding: 9px 10px;
+
+    border-bottom: 1px solid #3b465a;
+
+    color: #e8ebf0;
+
+    font-size: 9px;
+    vertical-align: middle;
+}
+
+.ticket-management-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.ticket-management-table tbody tr:hover {
+    background: #1b273b;
+}
+
+.ticket-management-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   COLUMN WIDTH
+========================================================= */
+
+/* Tanggal */
+.ticket-management-table th:nth-child(1),
+.ticket-management-table td:nth-child(1) {
+    width: 9%;
+}
+
+/* Nama Event */
+.ticket-management-table th:nth-child(2),
+.ticket-management-table td:nth-child(2) {
+    width: 15%;
+}
+
+/* Deskripsi */
+.ticket-management-table th:nth-child(3),
+.ticket-management-table td:nth-child(3) {
+    width: 17%;
+}
+
+/* Lokasi */
+.ticket-management-table th:nth-child(4),
+.ticket-management-table td:nth-child(4) {
+    width: 12%;
+}
+
+/* Harga */
+.ticket-management-table th:nth-child(5),
+.ticket-management-table td:nth-child(5) {
+    width: 10%;
+}
+
+/* Kuota */
+.ticket-management-table th:nth-child(6),
+.ticket-management-table td:nth-child(6) {
+    width: 7%;
+}
+
+/* Terjual */
+.ticket-management-table th:nth-child(7),
+.ticket-management-table td:nth-child(7) {
+    width: 7%;
+}
+
+/* Status */
+.ticket-management-table th:nth-child(8),
+.ticket-management-table td:nth-child(8) {
+    width: 8%;
+}
+
+/* Aksi */
+.ticket-management-table th:nth-child(9),
+.ticket-management-table td:nth-child(9) {
+    width: 15%;
+}
+
+
+/* =========================================================
+   TABLE TEXT
+========================================================= */
+
+.ticket-management-table td strong {
+    display: block;
+
+    color: #f3f4f6;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.ticket-management-table td small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #737e91;
+
+    font-size: 7px;
+}
+
+.ticket-event-name {
+    color: #f5f7fa;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.event-location {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    color: #e8ebf0;
+
+    font-weight: 600;
+}
+
+.event-location .material-symbols-rounded {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FREE CITIZEN
+========================================================= */
+
+.event-free {
+    color: #20c970 !important;
+}
+
+
+/* =========================================================
+   EVENT DESCRIPTION
+========================================================= */
+
+.event-description-table {
+    display: -webkit-box;
+
+    max-width: 190px;
+
+    overflow: hidden;
+
+    color: #8993a5;
+
+    font-size: 8px;
+    line-height: 1.5;
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.event-status {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 3px 7px;
+
+    border-radius: 20px;
+
+    font-size: 7px;
+    font-weight: 700;
+}
+
+.event-status.active {
+    background: #103d2c;
+    color: #2ed573;
+}
+
+
+/* =========================================================
+   ACTION
+========================================================= */
+
+.event-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+.event-actions a,
+.event-actions button {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+    color: #f0f2f5;
+
+    font-size: 8px;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.event-actions .material-symbols-rounded {
+    font-size: 11px;
+}
+
+.event-actions a:hover {
+    color: #4dabf7;
+}
+
+.event-actions button {
+    color: #ff4054;
+}
+
+.event-actions button:hover {
+    color: #ff7180;
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .ticket-management-table {
+        min-width: 1050px;
+    }
+
+    .ticket-table-container {
+        overflow-x: auto;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .ticket-page-header {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .ticket-page-title h1 {
+        font-size: 15px;
+    }
+
+    .ticket-page-title p {
+        font-size: 8px;
+    }
+
+    .btn-add-event {
+        padding: 6px 8px;
+
+        font-size: 8px;
+    }
+
+    .ticket-info {
+        align-items: flex-start;
+
+        font-size: 8px;
+        line-height: 1.5;
+    }
+
+    .ticket-card-header {
+        gap: 8px;
+    }
+
+    .ticket-month {
+        font-size: 9px;
+    }
+
 }

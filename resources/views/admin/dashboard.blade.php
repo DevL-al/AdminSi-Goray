@@ -122,7 +122,7 @@
     </div>
 
     {{-- =========================
-         TRANSACTION TABLE
+        TRANSACTION TABLE
     ========================= --}}
     <div class="dashboard-card table-card">
         <div class="card-header">

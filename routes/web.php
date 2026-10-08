@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\RegulerController;
 use App\Http\Controllers\Admin\PemesananController;
@@ -35,4 +36,13 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     Route::get('/pembayaran/{id}', [PembayaranController::class, 'show'])
         ->name('payment.show');
+        
+    Route::get('/events', [EventController::class, 'index'])
+        ->name('events.index');
+
+    Route::get('/events/create', [EventController::class, 'create'])
+        ->name('events.create');
+
+    Route::get('/events/{event}/edit', [EventController::class, 'edit'])
+        ->name('events.edit');
 });
